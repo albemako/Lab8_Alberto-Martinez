@@ -28,7 +28,8 @@ public class Lab1_AlbertoMartinez {
                         resp = 2;
                         do {
                             fuera = 1;
-                                System.out.println("hola");
+                            try {
+                                
                                 Imprimir(Tablero);
                                 System.out.println("");
                                 System.out.println("Es el turno de " + Jugador1 + "!");
@@ -41,6 +42,17 @@ public class Lab1_AlbertoMartinez {
                                 x1 = sc.nextInt();
                                 System.out.println("columna:");
                                 y1 = sc.nextInt();
+                                
+                            } catch (Exception e) {
+                                x=12;
+                                x1=12;
+                                y=12;
+                                y1=12;
+                                JOptionPane.showMessageDialog(null, "Escriba un numero, vuelva a intentar");
+                                sc.next();
+                            }
+                            
+                                
 
                             
                                 
@@ -225,17 +237,29 @@ public class Lab1_AlbertoMartinez {
                         resp = 2;
                         do {
                             fuera = 1;
-                            Imprimir(Tablero);
-                            System.out.println("");
-                            System.out.println("Es el turno de " + Jugador2 + "!");
-                            System.out.println("Escoja la Fila:");
-                            x = sc.nextInt();
-                            System.out.println("Columna:");
-                            y = sc.nextInt();
-                            System.out.println("Escoja la nueva posicion de fila:");
-                            x1 = sc.nextInt();
-                            System.out.println("columna:");
-                            y1 = sc.nextInt();
+                            try {
+                                
+                                Imprimir(Tablero);
+                                System.out.println("");
+                                System.out.println("Es el turno de " + Jugador2 + "!");
+                                System.out.println("Si escoje una posicion fuera del tablero se le volvera a preguntar");
+                                System.out.println("Escoja la Fila:");
+                                x = sc.nextInt();
+                                System.out.println("Columna:");
+                                y = sc.nextInt();
+                                System.out.println("Escoja la nueva posicion de fila:");
+                                x1 = sc.nextInt();
+                                System.out.println("columna:");
+                                y1 = sc.nextInt();
+                                
+                            } catch (Exception e) {
+                                x=12;
+                                x1=12;
+                                y=12;
+                                y1=12;
+                                JOptionPane.showMessageDialog(null, "Escriba un numero, vuelva a intentar");
+                                sc.next();
+                            }
 
                             if (x < 12 && y < 12 && x1 < 12 && y1 < 12 && x > 0 && y > 0 && x1 > 0 && y1 > 0) {
                                 fuera = 2;
